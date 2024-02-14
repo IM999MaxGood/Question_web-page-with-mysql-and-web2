@@ -11,20 +11,8 @@ run http://localhost:8080/
 
 
 
-VVV is temp-------------------------------------------------
-pip install web.py git+https://github.com/webpy/webpy.git@0.70  git+https://{oauth}@github.com/{repo}/{package}.git@{release_tag}#egg={name}-{version}
+VVV for web.py 0.70------------------------------------------------
+pip install https://github.com/webpy/webpy/archive/master.zip
 
-python.exe -m pip install --upgrade pip
-
-pip install web.py==0.61
-
-pip install cheroot markdown git+https://github.com/webpy/webpy.git
-
-pip install lpthw.web
-pip install utils
-pip install db
-
-
-pip install python-utils
-
-pip install bottle
+pip install multipart
+pip show web.py
