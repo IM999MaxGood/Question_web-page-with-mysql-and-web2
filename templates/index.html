@@ -1,0 +1,37 @@
+$def with (items)
+
+<h1>Items</h1>
+<h3><a href="/add">add item</a></h3>
+<hr/>
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <td>
+            Title
+        </td>
+        <td>
+            Actions
+        </td>
+    </tr>
+    $for item in items:
+        <tr>
+            <td>
+                $item.id
+            </td>
+            <td>
+                $item.title
+            </td>
+            <td>
+                <form action="/del/$item.id" method="post">
+                    <input type="submit" value="Delete"/>
+                </form>
+
+                <!--im999 because of error added a " : tokenize.TokenError: ('unterminated string literal (detected at line 1)', (1, 4))-->
+                <a href="/del/$item.id"">Delete</a>
+                <!--im999 because of error added a " : tokenize.TokenError: ('unterminated string literal (detected at line 1)', (1, 4))-->
+                <a href="/edit/$item.id"">Edit</a>
+            </td>
+        </tr>
+</table>
